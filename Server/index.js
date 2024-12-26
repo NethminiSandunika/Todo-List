@@ -28,6 +28,41 @@ app.get('/get', (req, res) => {
 })
 
 
+//This endpoint allows the frontend to update a specific task in the database (e.g., mark it as done).
+
+//The frontend sends a PUT request to the backend with the id of the task to update. For example:
+//http://localhost:3001/update/12345
+
+app.put('/update/:id', (req, res) => {
+
+    //req.params: It extracts the id part (12345) from the URL.
+    const {id} = req.params;
+
+    //findByIdAndUpdate: It searches the database for the task with _id: 12345 and updates its done field to true
+    TodoModel.findByIdAndUpdate({_id: id}, {done: true})
+    
+    //If the task is successfully updated in the database, the server sends the updated task back to the frontend as a response.
+    .then(result => res.json(result))
+
+    //If something goes wrong (e.g., invalid id), it sends an error message to the frontend.
+    .catch(err => res.json(err))
+})
+
+
+//This endpoint allows the frontend to delete a specific task from the database.
+
+//The frontend sends a DELETE request to the backend with the id of the task to delete. For example:
+//http://localhost:3001/delete/12345
+
+// this is same as the update request
+app.delete('/delete/:id', (req, res) => {
+    const {id} = req.params;
+    TodoModel.findByIdAndDelete({_id: id}, {done: true})
+    .then(result => res.json(result))
+    .catch(err => res.json(err))
+})
+
+
 //app.post('/add', ...):
 //Listens for POST requests sent to the /add endpoint.
 //frontend sends a POST request with a task to add.

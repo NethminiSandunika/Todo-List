@@ -13,7 +13,9 @@ function Create() {
         axios.post('http://localhost:3001/add', {task: task})
         
         //If the request is successful, the response is logged to the console.
-        .then(result => console.log(result))
+        .then(result => {
+            location.reload()
+        })
 
         //If there’s an error the error is logged to the console.
         .catch(err => console.log(err))

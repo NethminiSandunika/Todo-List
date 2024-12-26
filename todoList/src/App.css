@@ -1,19 +1,121 @@
+/* Home container styling */
 .home {
-  display:flex;
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; /* Clean and modern font */
+  background: linear-gradient(135deg, #ece9e6, #ffffff); /* Subtle gradient */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  color: #333;
+}
+
+/* Title styling */
+.home h2 {
+  font-size: 2rem;
+  color: #007bff; /* Vibrant blue for headings */
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Form input field */
+.create_form input {
+  width: 350px;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create_form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
+}
+
+/* Add button styling */
+.create_form button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Gradient button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.create_form button:hover {
+  transform: scale(1.05); /* Slight enlargement */
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3); /* Button shadow on hover */
+}
+
+/* Task cards styling */
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  background: linear-gradient(135deg, #333, #444); /* Gradient for tasks */
+  color: white;
+  height: 50px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.task:hover {
+  transform: translateY(-3px); /* Slight lift on hover */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Checkbox area styling */
+.checkbox {
+  display: flex;
   align-items: center;
 }
 
-.create_form input{
-  width: 300px;
-  padding: 10px;
-  border-bottom: 2px solid;
-  outline: none;
+/* Completed tasks styling */
+.line_through {
+  text-decoration: line-through;
+  color: #aaa; /* Faded color for completed tasks */
 }
 
-.create_form button {
-  padding: 10px;
-  background-color: black;
-  color: white;
+/* Task icons styling */
+.checkbox .icon {
+  margin-right: 10px;
+  font-size: 24px; /* Larger size for better visibility */
   cursor: pointer;
+  color: #4caf50; /* Green for active tasks */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.checkbox .icon:hover {
+  color: #388e3c; /* Darker green on hover */
+  transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+/* Trash icon styling */
+.task div .icon {
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffa726; /* Orange for delete icon */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.task div .icon:hover {
+  color: #e6891a; /* Darker orange on hover */
+  transform: scale(1.2); /* Slight enlargement on hover */
+}
+
+/* "No Record" message styling */
+.home div h2 {
+  font-size: 1.5rem;
+  color: #888; /* Neutral color for empty state */
+  margin-top: 20px;
+  text-align: center;
 }
