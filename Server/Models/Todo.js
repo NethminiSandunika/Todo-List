@@ -1,3 +1,7 @@
+//Todo.js defines the structure and schema for how "todos" (tasks) are stored in your MongoDB database.
+
+
+
 //A library for working with MongoDB in Node.js.
 const mongoose =  require('mongoose')
 

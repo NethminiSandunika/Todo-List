@@ -1,6 +1,3 @@
-#A configuration file that tells Git which files and folders to ignore when committing code.
-
-
 # Logs
 logs
 *.log

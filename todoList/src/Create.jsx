@@ -1,3 +1,5 @@
+//A specific component responsible for rendering the form or interface to add a new task to the todo list.
+
 import React, { useState } from 'react'
 import axios from 'axios' //A library for making HTTP requests (to send data to your backend)
 

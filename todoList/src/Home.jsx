@@ -1,3 +1,5 @@
+//The main component that manages and displays the list of tasks
+
 import React, { useEffect, useState } from 'react'
 import Create from './Create'
 import axios from 'axios'

@@ -1,3 +1,7 @@
+//index.js file is the entry point for backend application.
+//In Node.js, index.js is a convention for the main file in a folder.
+//If you require or run the server folder, Node.js will automatically look for index.js.
+
 const express = require('express') // Framework to build the server
 const mongoose = require('mongoose') // Library to connect to MongoDB
 const cors = require('cors') // Middleware to handle cross-origin requests

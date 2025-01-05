@@ -1,5 +1,3 @@
-//a tool that helps ensure your code follows best practices and is free of common errors.
-
 import js from '@eslint/js'
 import globals from 'globals'
 import react from 'eslint-plugin-react'
